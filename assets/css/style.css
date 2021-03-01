@@ -1,0 +1,219 @@
+html {
+  height: 650px
+}
+
+body {
+  height: 650px;
+  background-color:  hsl(0, 0%, 81%);
+}
+
+.container {
+  height: 100%;
+}
+
+.container .card .card-contact {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.container .card .avatar {
+  max-width: 30px;
+
+}
+
+.container .card .card-contact .avatar img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 100%;
+
+}
+
+.container .card .card-contact .name {
+  max-width: 100px;
+  max-height: 35px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-start;
+
+}
+
+.card-contact .name h3 {
+  color:hsl(217, 19%, 35%);
+  font-size: 11px;
+  margin-bottom: 2px;
+  font-family:'Barlow Semi Condensed', sans-serif; 
+
+}
+
+.card-contact .name p {
+  color:hsl(0, 0%, 81%);
+  font-size: 9px;
+  margin-top: 0px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  opacity:70%
+
+}
+
+.container .card {
+  background-color:white;
+  color:black;
+  padding:30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  max-height: 100%;
+  box-shadow: 2px 2px 15px 1px  grey
+
+}
+
+.container .card .card-text h3 {
+  color: hsl(217, 19%, 35%);
+  font-size: 22px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  line-height: 19px;
+
+}
+
+.container .card .card-text p {
+  color: hsl(217, 19%, 35%);
+  font-size: 10px;
+  letter-spacing: 2px;
+  line-height: 19px;
+  font-family:'Barlow Semi Condensed', sans-serif; 
+  font-weight: 400;
+  opacity: 70%;
+
+}
+
+/* card-violet*/
+
+.container .card.card-violet {
+  background: hsl(263, 55%, 52%);
+  background-image: url(file:///C:/Users/Agustin/OneDrive/Desktop/proyectos/article-2/assets/img/images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 77% 0%
+
+}
+
+.container .card.card-violet .card-contact .avatar img {
+  border: 1px solid hsl(0, 0%, 81%)
+
+}
+
+.container .card.card-violet .card-contact .name h3 {
+  color: white
+
+}
+
+.container .card.card-violet .card-text h3 {
+  color: white
+
+}
+
+.container .card.card-violet .card-text p {
+  color: hsl(0, 0%, 81%);
+  opacity: 70%;
+}
+
+
+/* card-blue */
+
+.container .card.card-blue .card-contact .name h3 {
+  color: white
+
+}
+
+.container .card.card-blue {
+  background: hsl(217, 19%, 35%);
+
+}
+
+.container .card.card-blue .card-text h3  {
+  color: white 
+
+}
+
+.container .card.card-blue .card-text p {
+  color:hsl(0, 0%, 81%)
+}
+
+
+/* card-black */
+
+.container .card.card-black {
+  background: hsl(219, 29%, 14%)
+
+}
+
+.container .card.card-black .card-contact .avatar img {
+  border: 2px solid hsl(263, 55%, 52%)
+
+}
+
+.container .card.card-black .card-contact .name h3 {
+  color: white
+
+}
+
+.container .card.card-black .card-text h3 {
+  color: white
+
+}
+
+.container .card.card-black .card-text p {
+  color:hsl(0, 0%, 81%)
+
+}
+
+
+
+@font-face {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  src: url(/assets/statics/BarlowSemiCondensed-Light.ttf);
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 285px 285px;
+  align-content: center;
+  gap: 20px;
+  height: 100%;
+
+}
+
+.container article {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.container .card.card-violet {
+  grid-column: 1/3;
+
+}
+
+.container .card.card-big {
+  grid-row: 1/3;
+  grid-column: 4;
+
+}
+
+.container .card.card-black {
+  grid-column: 2/4;
+
+}
