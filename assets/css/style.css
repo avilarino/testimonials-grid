@@ -114,46 +114,47 @@ body {
 
 /*---------------RESPONSIVE ---------------------*/
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 800px) {
 
-  .container {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25% auto;
-    grid-template-rows:  50% 50%;
-    grid-template-areas: "a a b c"
-                         "d e e c"
-    
-  }
+.container {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25% auto;
+  grid-template-rows:  50% 50%;
+  grid-template-areas: "a b c"
+                       "d e c"
+}
 
-  
-  .card.grid-1 {
-    grid-area: a;
-  }
+.card.grid-1 {
+  grid-area: a;
+}
 
-  .card.grid-2 {
-    grid-area: b;
-  }
+.card.grid-2 {
+  grid-area: b;
+}
 
-  .card.grid-3 {
-    grid-area: c;
-  }
+.card.grid-3 {
+  grid-area: c;
+}
 
-  .card.grid-4 {
-    grid-area: d;
-  }
+.card.grid-4 {
+  grid-area: d;
+}
 
-  .card.grid-5 {
-    grid-area: e;
-  }
+.card.grid-5 {
+  grid-area: e;
+}
 
-  .container .card {
-    overflow:hidden
-  }
+.container .card {
+  overflow:hidden
+}
 
 
 }
 
-@media only screen and (min-width: 768px) {
+
+
+
+@media only screen and (min-width: 1000px) {
 
   .container {
     display: grid;
@@ -187,3 +188,9 @@ body {
   .container .card {
     overflow:hidden
   }
+
+}
+
+
+
+
