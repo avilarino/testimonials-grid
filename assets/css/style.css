@@ -5,23 +5,34 @@ html {
 body {
   height: 100%;
   background-color:  #cfcfcf;
-  flex-direction: column;
+  flex-direction: column; /* agregar display flex y justify content center */
   align-items: center;
   padding: 0;
   margin: 0
 }
+/*
+
+al container inicial no le daria display grid
 
 .container {
- height: 100%;
- display: grid;
- grid-template-areas: "a"
+  max-height: 100%;
+  padding: 30px;
+}
+
+y faltaria darle margin bottom a cada card solo para mobile o pisarlo en los otros
+
+*/
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "a"
                       "b"
                       "c"
                       "d"
                       "e"
                       "f" ;
- grid-template-columns: 1fr;
- gap: 30px
+  grid-template-columns: 1fr;
+  gap: 30px
 }
 
 .card.grid-1 {
@@ -47,6 +58,10 @@ body {
 
 /*-----------------COMUN CARD -------------------------*/
 
+/*
+  en card el color sobra, el color se le da a los elementos de texto (p, span, h1/h6, etc)
+
+*/
 .card {
   background: white;
   color: #48556a;
@@ -130,7 +145,7 @@ body {
 }
 
 
-
+/* la font tiene que ir al principio asi lo carga lo antes posible */
 /*----------------FONT FACE ---------------------*/
 
 @font-face {
@@ -145,7 +160,7 @@ body {
 @media only screen and (min-width: 800px) {
   .container {
       display: grid;
-      height: 100%;
+      height: 100%; /* eliminar */
       padding: 30px;
       grid-template-columns: 50%;
       grid-template-areas:
@@ -154,7 +169,7 @@ body {
           "d b";
       padding: 30px;
   }
-
+/* en esta linea debe cerrar el media query, falta } */
 
 @media only screen and (min-width: 1100px) {
 
@@ -162,7 +177,7 @@ body {
   display: grid;
   grid-template-areas:  "a a b c"
                         "d e e c";
-  height: 100%;
+  height: 100%; /* eliminar */
   padding: 30px;
   grid-template-columns: 25%;
   grid-template-rows: 50%;
@@ -174,10 +189,10 @@ body {
 
 }
 
+/* limpiar todos los espacios en blanco y mejorar indentacion */
 
 
 
-
-}
+} /* este sobra*/
 
 
