@@ -5,7 +5,7 @@ html {
 body {
   height: 100%;
   background-color:  #cfcfcf;
-  display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 0;
 }
@@ -13,9 +13,36 @@ body {
 .container {
  height: 100%;
  display: grid;
+ grid-template-areas: "a"
+                      "b"
+                      "c"
+                      "d"
+                      "e"
+                      "f" ;
  grid-template-columns: 1fr;
  gap: 30px
 }
+
+.card.grid-1 {
+  grid-area: a
+}
+
+.card.grid-2 {
+  grid-area: c
+}
+
+.card.grid-3 {
+  grid-area: e
+}
+
+.card.grid-4 {
+  grid-area: d
+}
+
+.card.grid-5 {
+  grid-area: b
+}
+
 
 /*-----------------COMUN CARD -------------------------*/
 
@@ -115,31 +142,41 @@ body {
 /*---------------RESPONSIVE ---------------------*/
 
 @media only screen and (min-width: 800px) {
+  .container {
+      display: grid;
+      max-height: 100%;
+      padding: 30px;
+      grid-template-columns: 50%;
+      grid-template-areas:
+          "a c"
+          "e e"
+          "d b";
+      padding: 30px;
+  }
+
+
+@media only screen and (min-width: 1100px) {
 
 .container {
   display: grid;
   grid-template-areas:  "a a b c"
-                        "d e e c"
+                        "d e e c";
+  max-height: 100%;
+  padding: 30px;
+  grid-template-columns: 25%;
+  grid-template-rows: 50%;
 }
 
-.card.grid-1 {
-  grid-area: a;
-}
-
-.card.grid-2 {
-  grid-area: b;
-}
-
-.card.grid-3 {
-  grid-area: c;
-}
-
-.card.grid-4 {
-  grid-area: d;
-}
-
-.card.grid-5 {
-  grid-area:  e;
+.card {
+  overflow: hidden;
 }
 
 }
+
+
+
+
+
+}
+
+
